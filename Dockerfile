@@ -36,7 +36,6 @@ RUN cd /opt \
     && cd build \
     && cmake -DCMAKE_BUILD_TYPE=Release -DLASZIP_INCLUDE_DIRS=/opt/LAStools/LASzip/dll/ -DLASZIP_LIBRARY=/usr/local/lib/liblaszip.so .. \
     && make \
-    && make install \
-    && cp -r /opt/PotreeConverter/PotreeConverter/resources /opt/PotreeConverter/build/resources
+    && make install
 
-CMD /opt/PotreeConverter/build/PotreeConverter
+CMD PotreeConverter
